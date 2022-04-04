@@ -1,6 +1,10 @@
+import useModalDOM from "helpers/hooks/useModalDOM";
+import useScrollAnchor from "helpers/hooks/useScrollAnchor";
 import React from "react";
 
 const Hero = () => {
+  useScrollAnchor();
+  useModalDOM();
   return (
     <section className="flex items-center hero">
       <div className="w-full absolute z-20 inset-0 md:relative md:w-1/2 text-center flex flex-col justify-center hero-caption">
@@ -28,8 +32,8 @@ const Hero = () => {
           <div className="overlay right-0 bottom-0 md:inset-0">
             <button
               className="video hero-cta focus:outline-none z-30 modal-trigger"
-              data-content='<div className="w-screen pb-56 md:w-88 md:pb-56 relative z-50">
-            <div className="absolute w-full h-full">
+              data-content='<div class="w-screen pb-56 md:w-96 md:pb-56 relative z-50">
+            <div class="absolute w-full h-full">
               <iframe
                 width="100%"
                 height="100%"
